@@ -1,0 +1,29 @@
+[33mcommit a7699f9c8f1740b831a4d9c12a9ec6c7c720b267[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: Feichtinger Jonas <J.Feichtinger@htlvb.at>
+Date:   Fri Mar 20 08:07:46 2026 +0100
+
+    User can enter numbers
+
+[33mcommit 76b452a7b61e633592088ccc5a35775efd157480[m
+Author: Feichtinger Jonas <J.Feichtinger@htlvb.at>
+Date:   Fri Mar 6 11:18:51 2026 +0100
+
+    add easy calculator
+
+[33mcommit 9a5c02d59d3a92ae8dcaac4889ac4c1b370c4299[m
+Author: Feichtinger Jonas <J.Feichtinger@htlvb.at>
+Date:   Fri Mar 6 11:11:28 2026 +0100
+
+    add headline
+
+[33mcommit 3fe368189503676c5d4156b1a245dd2caf20db16[m
+Author: Feichtinger Jonas <J.Feichtinger@htlvb.at>
+Date:   Fri Mar 6 11:09:14 2026 +0100
+
+    Ignore VS files
+
+[33mcommit ffdac1723ac194a46d27ea5cf167080c13ae914c[m
+Author: Feichtinger Jonas <J.Feichtinger@htlvb.at>
+Date:   Fri Mar 6 10:56:10 2026 +0100
+
+    Add empty project
