@@ -1,4 +1,6 @@
-﻿Console.WriteLine("== Tiny calculator ==");
+﻿using System.Text;
+
+Console.WriteLine("== Tiny calculator ==");
 
 Console.ForegroundColor = ConsoleColor.Green;
 
@@ -20,18 +22,8 @@ Console.ForegroundColor = ConsoleColor.Magenta;
 Console.WriteLine($"{a} * {b} = {a * b}");
 Console.ResetColor();
 
-if (b == 0)
-{
-    Console.ForegroundColor = ConsoleColor.Red;
-    Console.WriteLine($"{a} / {b} = undefiniert/unendlich");
-    Console.ResetColor();
-}
-else
-{
-    Console.ForegroundColor = ConsoleColor.Cyan;
-    Console.WriteLine($"{a} / {b} = {(double)a / b}");
-    Console.ResetColor();
-}
+Console.OutputEncoding = Encoding.UTF8;
+Console.WriteLine($"{a} / {b} = {(double)a / b}");
 
 static int OperandError(string title)
 {
