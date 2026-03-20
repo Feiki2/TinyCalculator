@@ -2,11 +2,9 @@
 
 Console.ForegroundColor = ConsoleColor.Green;
 
-Console.Write("1. Operand: ");
-int a = Convert.ToInt32(Console.ReadLine());
+int a = OperandError("1. Operand: ");
 
-Console.Write("2. Operand: ");
-int b = Convert.ToInt32(Console.ReadLine());
+int b = OperandError("2. Operand: ");
 
 Console.ResetColor();
 
@@ -33,4 +31,18 @@ else
     Console.ForegroundColor = ConsoleColor.Cyan;
     Console.WriteLine($"{a} / {b} = {a / b}");
     Console.ResetColor();
+}
+
+static int OperandError(string title)
+{
+        Console.Write($"{title} ");
+        int a;
+        while (!int.TryParse(Console.ReadLine(), out a))
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine($"FEHLER: {title }ist keine Zahl!");
+            Console.ResetColor();
+            Console.Write($"{title} ");
+        }
+        return a;
 }
