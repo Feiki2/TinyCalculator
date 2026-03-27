@@ -5,7 +5,6 @@ Console.WriteLine("== Tiny calculator ==");
 Console.ForegroundColor = ConsoleColor.Green;
 
 int a = OperandError("1. Operand: ");
-
 int b = OperandError("2. Operand: ");
 
 Console.ResetColor();
@@ -25,16 +24,20 @@ Console.ResetColor();
 Console.OutputEncoding = Encoding.UTF8;
 Console.WriteLine($"{a} / {b} = {(double)a / b}");
 
+Console.ForegroundColor = ConsoleColor.Cyan;
+Console.WriteLine($"{a} ^ {b} = {Math.Pow(a, b)}");
+Console.ResetColor();
+
 static int OperandError(string title)
 {
+    Console.Write($"{title} ");
+    int a;
+    while (!int.TryParse(Console.ReadLine(), out a))
+    {
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine($"FEHLER: {title} ist keine Zahl!");
+        Console.ResetColor();
         Console.Write($"{title} ");
-        int a;
-        while (!int.TryParse(Console.ReadLine(), out a))
-        {
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine($"FEHLER: {title }ist keine Zahl!");
-            Console.ResetColor();
-            Console.Write($"{title} ");
-        }
-        return a;
+    }
+    return a;
 }
