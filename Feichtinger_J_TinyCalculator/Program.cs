@@ -117,4 +117,8 @@ static void PrintResults(double a, double b)
         Console.WriteLine($"{a} / {b} = {(double)a / b}");
     }
     Console.ResetColor();
+
+    Console.ForegroundColor = ConsoleColor.Cyan;
+    Console.WriteLine($"{a} ^ {b} = {Math.Pow(a, b)}");
+    Console.ResetColor();
 }
